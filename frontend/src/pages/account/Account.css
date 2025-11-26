@@ -1,0 +1,374 @@
+.account-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    min-height: 60vh;
+}
+
+.account-sidebar {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: fit-content;
+}
+
+.account-sidebar__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.account-sidebar__card strong {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.account-sidebar__card span {
+    color: var(--slate-400);
+    font-size: 0.9rem;
+}
+
+.account-chip__actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.account-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.account-sidebar nav a {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    color: var(--slate-300);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.account-sidebar nav a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.account-sidebar nav a.active {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--primary);
+    border-left: 2px solid var(--primary);
+}
+
+.account-content {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Orders Styles */
+.orders {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.order-card {
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.order-card:hover {
+    border-color: rgba(139, 92, 246, 0.2);
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.order-card header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.order-card header div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.account-chip__label {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.order-card header strong {
+    color: #fff;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.order-card header p {
+    color: var(--slate-400);
+    font-size: 0.9rem;
+}
+
+.order-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.order-card li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-card li div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.order-card li div:first-child strong {
+    color: var(--slate-200);
+}
+
+.order-card li div:first-child span {
+    color: var(--slate-400);
+    font-size: 0.9rem;
+}
+
+.order-card li div:last-child {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.order-card li div:last-child strong {
+    color: #fff;
+}
+
+.order-card footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.order-card footer span {
+    color: var(--slate-300);
+    text-transform: capitalize;
+}
+
+.order-card footer strong {
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+/* Addresses Styles */
+.addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.address-form {
+    background: rgba(15, 23, 42, 0.4);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.address-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+}
+
+.address-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.address-form label.full {
+    grid-column: 1 / -1;
+}
+
+.address-form span {
+    color: var(--slate-300);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.address-form input {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.address-form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.address-form .checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+}
+
+.address-form .checkbox input {
+    width: auto;
+    accent-color: var(--primary);
+}
+
+.address-form .form-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.address-form button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.address-form button.primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.address-form button:not(.primary) {
+    background: transparent;
+    color: var(--slate-400);
+}
+
+.address-form button:not(.primary):hover {
+    color: #fff;
+}
+
+.addresses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.address-card {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.address-card:hover {
+    border-color: rgba(139, 92, 246, 0.2);
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.address-card.default {
+    border-color: var(--primary);
+    background: rgba(139, 92, 246, 0.05);
+}
+
+.address-card header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.address-card header strong {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.address-card .badge {
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.address-card p {
+    color: var(--slate-300);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.address-card__actions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    gap: 1rem;
+}
+
+.address-card__actions button {
+    background: none;
+    border: none;
+    color: var(--slate-400);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.address-card__actions button:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 900px) {
+    .account-layout {
+        grid-template-columns: 1fr;
+    }
+}

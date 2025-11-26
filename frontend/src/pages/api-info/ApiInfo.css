@@ -1,0 +1,69 @@
+.api-info-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.api-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.api-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.api-header p {
+    color: var(--slate-400);
+    font-size: 1.1rem;
+}
+
+.endpoint-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.endpoint-card:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.method {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.method.get {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+}
+
+.method.post {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.path {
+    font-family: monospace;
+    color: var(--slate-200);
+    font-size: 1.1rem;
+}
+
+.description {
+    margin-top: 1rem;
+    color: var(--slate-400);
+    font-size: 0.95rem;
+}
